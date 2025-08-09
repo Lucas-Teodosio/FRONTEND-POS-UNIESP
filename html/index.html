@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mundial FIFA</title>
+  <link rel="icon" href="https://tse2.mm.bing.net/th/id/OIP.-2yVtljleHSga-evyZbZ3wHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Veja a lista de mundial do Palmeiras. 🐷</h1>
+  <button onclick="abrirModal()">Consulte aqui 🔎</button>
+
+  <div id="meuModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal()">&times;</span>
+      <p>❌❌Não encontrado❌❌</p>
+    </div>
+  </div>
+
+  <script>
+    function abrirModal() {
+      document.getElementById('meuModal').style.display = 'block';
+    }
+
+    function fecharModal() {
+      document.getElementById('meuModal').style.display = 'none';
+    }
+
+    window.onclick = function (event) {
+      const modal = document.getElementById('meuModal');
+      if (event.target == modal) {
+        fecharModal();
+      }
+    }
+  </script>
+
+</body>
+
+</html>
